@@ -1,0 +1,10 @@
+★decs 테이블명;	특정테이블(표)이 어떤 열로 구성되어 있는지 확인
+★select [열이름] from [테이블명];	테이블의 열 내용을 조회하는데 사용(열 2개 이상 사용할때는 [열 이름], [열 이름]
+
+★set linesize 300;	라인의 너비 조정
+
+★clear screen;	화면을 깨끗하게
+cl=clear	줄여서도 사용 가능
+
+★select * from jobs
+   oredr by min_salary desc;	desc = 내림차순 출력 없으면 오름차순
