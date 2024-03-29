@@ -1,0 +1,26 @@
+30916_최수혁_0329
+
+문제7> jobs 테이블에서 min_salary 값이 5000 이하 이고 max_salary 값이 10000 이상인 job_id를 출력하시오.
+
+select job_id from jobs
+     where min_salary<=5000 and max_salary>=10000;
+
+문제8> jobs 테이블에서 min_salary 값이 5000 미만 이거나 max_salary 값이 9000  초과인 job_title을 출력하시오.
+
+select job_title from jobs
+     where min_salary<5000 or max_salary>9000;
+
+문제9> job_title이 programmer인 행전체를 출력하시오.
+
+select * from jobs
+     where job_title = 'Programmer';
+
+문제10> job_title이 Programmer, Marketing Manager인 행 전체를 출력하시오.
+
+select * from jobs
+     where job_title='Programmer' or job_title='Marketing Manager';
+
+문제11> 위 문제를 in 넣어서
+
+select * from jobs
+     where job_title in('Programmer','Marketing Manager');
