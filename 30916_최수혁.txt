@@ -1,0 +1,4 @@
+select job_title, max_salary, max_salary*2 from jobs; // 새로운 열 생성
+
+문제12> jobs 테이블에서 job_title의 문자수를 세어 새로운 열(length)과 함께 출력하시오.
+SQL> select job_title, length(job_title) from jobs;
