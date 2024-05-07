@@ -1,0 +1,12 @@
+☆ 테이블을 생성하는 create문
+
+SQL> create table boy
+  2  as select * from jobs;
+
+☆ 테이블에 데이터를 추가하는 inster문
+
+SQL> insert into boy(job_id, job_title,min_salary,max_salary)
+  2  values('AD_PRES','KING',20000,400000);
+
+SQL> insert into boy(job_id, job_title,min_salary,max_salary)
+  2  values('PD_PRES','QUEEN',10000,125000);
