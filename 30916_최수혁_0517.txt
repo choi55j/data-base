@@ -1,0 +1,24 @@
+★테이블 생성
+
+SQL> create table ETA
+  2  as select * from jobs;
+
+as select = jobs의 열 전체를 복사한다 ETA라는 이름으로
+
+☆ 테이블에 데이터를 추가하는 insert문
+
+SQL> insert into ETA
+  2  (job_id,job_title,min_salary,max_salary)
+  3  values('AD_PRES','KING',20000,400000);
+
+# 열이름을 쓰지 않아도 가능
+SQL> insert into ETA
+  2  values('FD_ABD','QUEEN',10000,125000);
+
+# job_id는 중복 불가 기본 셋팅
+
+SQL> insert into ETA
+  2  (job_id,job_title,min_salary,max_salary)
+  3  values('SAR_ENG','yoon',NULL,NULL);
+
+NULL 값은 표시되지 않음
