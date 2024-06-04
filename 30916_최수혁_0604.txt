@@ -1,0 +1,60 @@
+CREATE TABLE ABC(
+ 성명 varchar2(10),
+ 그래픽디자인 number(3),
+ DB number(3),
+ 프로그래밍 number(3),
+ 평가 varchar2(10));
+  insert into ABC
+  values('최수혁',100,98,100,'최우수');
+insert into ABC
+  values('안윤지',76,98,88,'보통');
+insert into ABC
+  values('홍영준',99,98,92,'보통');
+insert into ABC
+  values('김준원',98,98,97,'우수');
+insert into ABC
+  values('양민석',100,95,98,'우수');
+
+★ alter
+
+SQL> alter table ABC
+  2  add 몸무게 varchar2(10);
+문제 37> ABC테이블의 몸무게를 비고로 수정하시오
+SQL> alter table ABC
+  2  rename column 몸무게 to 비고;
+
+★ 기존 테이블을 복사하여 새 테이블 생성하기
+
+create table 테이블 이름
+as select * from 복사할 테이블;
+
+
+SQL> insert into ABC(비고)
+  2  values('조기졸업대상');
+
+★ 기존 테이블에서 일부 데이터를 복사하여 새 테이블 생성하기
+
+create table 테이블 이름
+as select * from 복사할 테이블
+where 조건
+
+문제 45> abcd 테이블에서 '그래픽디자인' 점수가 95점 이상인 데이터에 대해 새로운 테이블을 만드시오('abcde')
+
+SQL> create table abcde
+  2  as select * from abcd
+  3  where 그래픽디자인 >= 95;
+
+★ 열의 자료형을 변경 modify
+alter table 이름
+modify 자료형;
+
+문제 46> ABC테이블의 '비고'열의 자료형을 varchar(18)로 수정하시오
+
+SQL> alter table ABC
+  2  modify 비고 varchar(18);
+
+
+문제 47> ABC테이블의 비고열을 삭제하시오
+
+SQL> alter table ABC
+  2  drop column 비고;
