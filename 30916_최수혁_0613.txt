@@ -1,0 +1,25 @@
+문제 39> '부서별 성과분석표' 테이블을 생성하고
+'부서명','3월 MAR', '4월 MAR', '5월 MAR', '비고' 의 열을 생성하시오.
+(단 부서명과 비고는 문자형 타입선언, 나머지는 숫자형 4자리로 선언하시오.)
+※(정수 타입 NUMBER(4)
+   문자 타입 VARCHAR2(20)
+
+
+SQL> create table 부서별성과분석표(
+  2  부서명 varchar2(20),
+  3  MAR number(4),
+  4  APR number(4),
+  5  MAY number(4),
+  6  비고 varchar2(20));
+
+insert into 부서별성과분석표
+values('총무부',55,38,50,'부족');
+
+insert into 부서별성과분석표
+values('자재부',75,68,89,'보통');
+
+insert into 부서별성과분석표
+values('영업1부',88,93,97,'우수');
+
+insert into 부서별성과분석표
+values('관리부',77,88,70,'보통');
