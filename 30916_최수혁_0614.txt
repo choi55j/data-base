@@ -29,3 +29,26 @@ where may>=90;
 문제 42> 'abc' 테이블을 삭제하시오
 
 drop table abc;
+
+
+문제 36> 몸무게 이름의 열의 추가
+
+SQL> alter table 부서별성과분석표
+  2  add 몸무게 varchar2(10);
+
+
+문제 37> 부서별성과분석표 테이블의 '몸무게' 열 이름을 '성과금'으로 수정하시오
+
+SQL> alter table 부서별성과분석표
+  2  rename column 몸무게 to 성과금;
+
+문제 46> 부서별성과분석표의 'may'의 자료형을 number(5)로 수정하시오
+
+SQL> alter table 부서별성과분석표
+  2  modify may number(5);
+
+
+문제 47> '성과금' 열을 삭제하시오
+
+SQL> alter table 부서별성과분석표
+  2  drop column 성과금;
